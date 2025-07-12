@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="task_list.css">
+    <title>Görev Yönetim Uygulaması</title>
+</head>
+
+<body>
+
+    <h1>📋 Görev Yönetimi Paneli</h1>
+
+    <div class="container">
+
+        <form id="task-form">
+            <h2>Yeni Görev Ekle</h2>
+            <input type="text" id="title" placeholder="Başlık (zorunlu)" required />
+            <input type="text" id="description" placeholder="Açıklama (isteğe bağlı)" />
+
+            <div>
+                <label>Öncelik:</label><br/>
+                <label><input type="radio" name="priority" value="Düşük" /> Düşük</label>
+                <label><input type="radio" name="priority" value="Orta" /> Orta</label>
+                <label><input type="radio" name="priority" value="Yüksek" /> Yüksek</label>
+            </div>
+
+            <button type="submit">+  Ekle</button>
+
+
+        </form>
+
+        <div class="notebook">
+            <h2>📖 Görev Listesi</h2>
+            <div class="filters">
+                <label><input type="checkbox" id="filter-completed" /> Sadece tamamlananları göster</label>
+                <button id="sort-priority" type="button">^ Önceliğe Göre Sırala</button>
+            </div>
+            <ul id="task-list"></ul>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
